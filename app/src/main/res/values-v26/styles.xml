@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="counterOverflowTextStyle">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+        <item name="android:background">#ff0000</item>
+        <item name="android:textColorHint">@color/red</item>
+        <item name="android:colorError">@color/colorAccent</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:text">内容错误</item>
+        <item name="android:hint">内容填写错误</item>
+    </style>
+
+    <style name="errorTextStyle">
+        <item name="android:textColor">@color/pink</item>
+        <item name="android:colorError">@color/pink</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

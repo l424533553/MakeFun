@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xuanyuan.makefun">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- ***  特殊权限  *************************************************** -->
+    <!-- 外部存储读权限，调试工具加载本地补丁需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".base.EmasApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name="com.test.GGGActivity"
+            android:label="@string/title_activity_ggg"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".base.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".base.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".base.ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xuanyuan.makefun.base.ItemListActivity" />
+        </activity>
+        <activity
+            android:name="com.test.ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".test.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="27768424-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="6f2e8c9d40295d3e25781c69f3e5349c" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCPQbfVVRZvA62N+c42nSNzhVAnuhOv+PGyBFPsszoffCvJaFLY76k4er007FzTmhAj6R+I65yg/XBixpn6l3ND05PXqeBUlDW1Wa3cejOufCW0pokLTmj4ZBD76Wa/n15Kgakgz+3FARZxvMTdveu7AyktLvT9MNXIvHegqmBoYwdlzNRnThfqodC10pe4qTgBNatWrZB+0zbiKWhaUZNaj81ow3yUUVd5Rakfs9cNOi4IRg7TeQbgUk7t4I42A5Pc1AqXyQuMW/byIGcMi0sftI6Mc5w1WhMvfiITC0L4P6eNZwwca33mIF7ddDF/TKZ8G0PQyVbSgzEgFJPRZhcrAgMBAAECggEAb5XZA6rLVp2eykASiCfOPWVSEh+2xhM68Fa+qFjSpUOrN66zGZdUUFIKnvadN5WBjPdBQP2Fe0DuEYJw3eiqN+LN/easfjUTwLah3mKxbu/0zsoJZW0mBpSrRg1/ozMX1yE4A/7yTcmTGfTXw4Dz5S+JG1DAM5eebkWfSN5tSeDuU3ReNl1ExVx18/A2Aq45ar3H3Pzr2iXlOVUZtkanPE1Pde/Q/aUjP9S5Lt4OwzNNwkEuphj99WDY62ok7nnaSKEKhSJbWU1ujaFsDYvw863M7bsLqa6qRCf76x/3rAwtgGTxBB8/8z9K+q7ginYYsrV+ZLv5xAgNipyRItiawQKBgQDKMMDR6q/dCJB2qCBdi0XxENLhlmbissjERSkw7lSwbZVbRsMgNzmp2EY2jVE1ns3R1VSoJNuoDfTtB63fldThcoD0u5y4ADXcKKJwiSpt2I+wcrc1UCUXc2Stj2NH+rERllvksW7VkhM3ypGAKR86C+27pir1pjh2DOBaSJwFbwKBgQC1Yc5rJNHthS+Vv6x6/snNDWVh/TuumqU6+NJinPivuAnVK6x6JQ40pRcSlsMWu7jxVX2nKDewMQMAq1Pwav2WXBDK94KKNiErs7UeRsIpJSEX5Pq9ctsYxFAESRpYkXTxIf+2hHYT4AfdpVne0zIFfRCuRLltaMhLsObQ8l/EBQKBgQDB1TNFCuRF1iwIVO2SQC5xCFvigDlqI1NtNZBjpFf0O1nwA0qU29ygAwJs0dWEvhU6kHV0LMGXvqmLgs0hh5Zp+0e9Vw7LJwh7Y0k28YiHfhFiatdQeODWNn3SFaBsJN0Tqz21ZJSIkl1yIvSSFNom38CtIIQWs591LKr4YpuQaQKBgArmH6MsiTi+ggd7hv+1A6dAoNDsiIOLY1ZR0UJ/sCnO4zhd8XU9eMcNDH/fc0WQbiKCQpSixAXgTA/kO5z8sNQyIAgyKzPm4MNhfwactdoHEx/+cFql5ihs02oOgnjD9MTwiA8NkpLLKW3WG7pZ8m2GAFSYaJP8cdyqepQfnEWJAoGBAK2g7mDiYwZGMhgFXiXbxXFbXPUHeTkgBXmcxz+proOu+NHAdzfkc3aZqLY9ZcgZ1mKy5g+E6gEW6P+5JPWUMAH2qKTYzYGI7WnM44b7BTMxtjAk6okj0VEAGWKqh7lSBS/uFdGUS+EdXCX2HbabPznVxs6M31564KH/K1H9HDJz" />
+
+        <activity android:name=".TestActivity" />
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.xuanyuan.makefun.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <include
+            android:id="@+id/layout_bar_home"
+            layout="@layout/app_bar_home"
+            android:onClickListener="@{onClickListener}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- app:itemIconTint="@color/blue"  可以让所有的的item 图标为蓝色 -->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:onClickListener="@{onClickListener}"
+            app:itemIconTint="@color/blue"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_home"
+            app:menu="@menu/activity_home_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+</layout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/menu_tools" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate2">
+        <menu>
+            <item
+                android:id="@+id/nav_share2"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send2"
+                android:icon="@drawable/ic_menu_send"
+                android:orderInCategory="5"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+    <!-- 无论中间多少个item ,都是group>>item...>>group排列，所以该group在最末尾-->
+    <!-- enabled="false" 则子item或者该Group不可用，灰色显示-->
+    <!-- android:orderInCategory 设置显示的顺序-->
+    <!-- android:checkableBehavior="none" single表示radio box，all表示checkbox，none表示checkable=flase -->
+    <!--     android:menuCategory="secondary" -->
+    <group android:id="@+id/gp11" android:checkableBehavior="single"
+        android:orderInCategory="@android:integer/config_longAnimTime"
+        android:enabled="true" android:visible="true"
+        android:menuCategory="secondary" >
+        <item
+            android:id="@+id/nav_slideshow11"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="测试11" />
+        <item
+            android:id="@+id/nav_slideshow22"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="测试22" />
+    </group>
+
+    <item android:title="Communicate3">
+        <menu>
+            <item
+                android:id="@+id/nav_share3"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send3"
+                app:itemIconTint="@color/blue"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+    <item android:title="Communicate4">
+        <menu>
+            <item
+                android:id="@+id/nav_share4"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send4"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate5">
+        <menu>
+            <item
+                android:id="@+id/nav_share5"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send5"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>
